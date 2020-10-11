@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ako/routes/profile.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -68,18 +69,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 100,),
-              OutlinedButton(
+              MaterialButton(
                 onPressed: () {Navigator.of(context).pushReplacementNamed('/profile');},
-                style: ButtonStyle(
-                    padding: MaterialStateProperty.all<EdgeInsetsGeometry>(EdgeInsets.fromLTRB(70, 30, 70, 30)),
-                    overlayColor: MaterialStateProperty.all<Color>(Colors.grey),
-                    side: MaterialStateProperty.all<BorderSide>((BorderSide(color: Colors.white, width: 2.0, style: BorderStyle.solid))),
+                child: Container(
+                  alignment: Alignment.center,
+                  width: 240,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(9)
+                  ),
+                  child: Text(
+                    'CONTINUE',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodyText1,
+                  ),
                 ),
-                child: Text(
-                  'CONTINUE',
-                  style: Theme.of(context).textTheme.bodyText1,
-                ),
-              )
+              ),
             ],
         ),
           ),
