@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
 var notes = [
-  ['Bla Bla', 'lorem ipsum donor snfdjk'],
-  ['Harry Potter','magic magic bla bla'],
-  ['Chemistry', 'formulaed fcdsc']
+  ['Project Details', '1. Create a Calculator App.\n2. Extra Marks for Design\n3. Make Scientific Calc as well'],
+  ['Physics Exam Portion','Modules 4 through 6. (Skip Chapter 7)'],
+  ['English Notes', 'Merchant of Venice - Act 2 Scene 4.\nDiscussed scene plot, character develpments.']
 ];
 
 class Profile extends StatefulWidget {
@@ -35,7 +35,7 @@ class _State extends State<Profile> {
         length: 5,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Profile'),
+            title: Text('ako', style: Theme.of(context).textTheme.headline1,),
             actions: <Widget>[
               IconButton(
                 icon: const Icon(Icons.logout),
@@ -139,12 +139,126 @@ class _State extends State<Profile> {
                     ],
                   ),
                 ),
-                Text(
-                    'Hello'
+                Padding(
+                  padding: const EdgeInsets.only(top: 150.0),
+                  child: Column(
+                    children: <Widget>[
+                      IconButton(
+                        onPressed: () {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) => AlertDialog(
+                              content: Text("Sorry, This Feature is still under development :("),
+                            ),
+                           );
+                          },
+                        iconSize: 200,
+                        icon: Icon(Icons.scanner,color: Colors.greenAccent,),
+                      ),
+                      Text('Tap to Scan !', style: Theme.of(context).textTheme.headline2,),
+                    ],
+                  ),
                 ),
-                Text(
-                    'Hello'
-                ),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: ListView(
+                    children: [
+                      ExpansionTile(
+                        title: Row(
+                          children: [
+                            Icon(Icons.group, size: 30,),
+                            SizedBox(width: 30,),
+                            Text('IOT Class Group', style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(30.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('Members: 4\n', style: TextStyle(fontSize: 20, fontFamily: 'Arial'),),
+                                Text('Shared Assignments: 7', style: TextStyle(fontSize: 20, fontFamily: 'Arial'),),
+                                SizedBox(height: 40),
+                                Row(
+                                  children: [
+                                    MaterialButton(
+                                      child: Container(
+                                          padding: EdgeInsets.all(15),
+                                          decoration: BoxDecoration(
+                                            color: Colors.greenAccent,
+                                            borderRadius: BorderRadius.circular(9),
+                                          ),
+                                          child: Text('Share To-Do', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)),
+                                    ),
+                                    MaterialButton(
+                                        child: Container(
+                                          padding: EdgeInsets.all(15),
+                                          decoration: BoxDecoration(
+                                            color: Colors.greenAccent,
+                                            borderRadius: BorderRadius.circular(9),
+                                          ),
+                                          child: Text('Share Notes', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                                        )
+                                    )
+                                  ],
+                                ),
+                       ],
+                            ),
+                          ),
+                  ],
+                          ),
+
+                      ExpansionTile(
+                        title: Row(
+                          children: [
+                            Icon(Icons.group, size: 30,),
+                            SizedBox(width: 30,),
+                            Text('Web Project Group', style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(30.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('Members: 5\n', style: TextStyle(fontSize: 20, fontFamily: 'Arial'),),
+                                Text('Shared Assignments: 1', style: TextStyle(fontSize: 20, fontFamily: 'Arial'),),
+                                SizedBox(height: 50,),
+                                Row(
+                                  children: [
+                                    MaterialButton(
+                                      child: Container(
+                                        padding: EdgeInsets.all(15),
+                                          decoration: BoxDecoration(
+                                            color: Colors.greenAccent,
+                                            borderRadius: BorderRadius.circular(9),
+                                          ),
+                                          child: Text('Share To-Do', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)),
+                                    ),
+                                    MaterialButton(
+                                        child: Container(
+                                          padding: EdgeInsets.all(15),
+                                          decoration: BoxDecoration(
+                                            color: Colors.greenAccent,
+                                            borderRadius: BorderRadius.circular(9),
+                                          ),
+                                          child: Text('Share Notes', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                                        )
+                                    )
+                                  ],
+                                ),
+
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+
+                    ],
+                  ),
+                )
                ]
           ),
         ),
