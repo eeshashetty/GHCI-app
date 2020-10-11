@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 200),
+                padding: const EdgeInsets.only(top: 70),
                 child: Image(
                   image: AssetImage('assets/images/logo-title.png'),
                   width: 200,

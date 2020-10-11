@@ -112,6 +112,17 @@ class _State extends State<Profile> {
                             padding: const EdgeInsets.only(bottom: 30.0),
                             child: Text('My Notes', style: Theme.of(context).textTheme.headline1,),
                           ),
+                       MaterialButton(
+                          child: Container(
+                            padding: EdgeInsets.all(15),
+                            margin: const EdgeInsets.only(bottom: 30.0),
+                            decoration: BoxDecoration(
+                              color: Colors.greenAccent,
+                              borderRadius: BorderRadius.circular(9),
+                            ),
+                            child: Text('Port from Teams', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                          )
+                          ),
                         ListView(
                           scrollDirection: Axis.vertical,
                           shrinkWrap: true,
@@ -122,7 +133,7 @@ class _State extends State<Profile> {
                                 padding: EdgeInsets.all(30),
                                   alignment: Alignment.centerLeft,
                                   child: Text(note[1], style: TextStyle(fontFamily: 'Arial', fontSize: 18))
-                              )
+                              )  
                             ],
                           )).toList()
                         ),
