@@ -2,30 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:ako/routes/profile.dart';
 import 'package:flutter/services.dart';
 
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ako',
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        textTheme: TextTheme(
-          headline1: TextStyle(fontFamily: 'FiraSans', fontSize: 30, fontWeight: FontWeight.w800, color: Colors.white),
-          headline2: TextStyle(fontFamily: 'FiraSans', fontSize: 25, fontWeight: FontWeight.w600, letterSpacing: 1, color: Colors.white),
-          bodyText1: TextStyle(fontFamily: 'FiraSans', fontSize: 20, fontWeight: FontWeight.w600, letterSpacing: 1.5, color: Colors.white),
-          bodyText2: TextStyle(fontFamily: 'FiraSans', fontSize: 22, fontWeight: FontWeight.w400, letterSpacing:0.5, color: Colors.white),
+    title: 'Ako',
+    theme: ThemeData(
+      brightness: Brightness.dark,
+      textTheme: TextTheme(
+        headline1: TextStyle(fontFamily: 'FiraSans', fontSize: 30, fontWeight: FontWeight.w800, color: Colors.white),
+        headline2: TextStyle(fontFamily: 'FiraSans', fontSize: 25, fontWeight: FontWeight.w600, letterSpacing: 1, color: Colors.white),
+        bodyText1: TextStyle(fontFamily: 'FiraSans', fontSize: 20, fontWeight: FontWeight.w600, letterSpacing: 1.5, color: Colors.white),
+        bodyText2: TextStyle(fontFamily: 'FiraSans', fontSize: 22, fontWeight: FontWeight.w400, letterSpacing:0.5, color: Colors.white),
 
-        )
-      ),
-      home: MyHomePage(title: 'Ako'),
-      routes: {
-        '/profile': (context) => Profile(),
-      }
+      )
+    ),
+    home: MyHomePage(title: 'Ako'),
+    routes: {
+      '/profile': (context) => Profile(),
+    }
     );
   }
 }

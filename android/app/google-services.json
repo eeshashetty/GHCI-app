@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "229396135314",
+    "firebase_url": "https://ghci-app.firebaseio.com",
+    "project_id": "ghci-app",
+    "storage_bucket": "ghci-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229396135314:android:bb0c4d6ff532a4d14d154b",
+        "android_client_info": {
+          "package_name": "com.example.ako"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229396135314-l77t8q4c5qupventqqte5k9cbg0l0i6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIe2RQiFzacXSzHxkS8Bpn9MMRxvJmz1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229396135314-l77t8q4c5qupventqqte5k9cbg0l0i6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
